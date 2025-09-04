@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/appmycn/maodie@main/win98.css">
     <!-- 字体图标 -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/appmycn/maodie@main/font-awesome.css">
+    <script src="https://o.alicdn.com/alicloud-ams/alibabacloud-apm-h5-sdk/index.js"></script>
     <style>
         @font-face {  
             font-family: 'XiangSu';
@@ -250,6 +251,21 @@
     </div>
 
     <script>
+        // SDK 初始化
+        var apm = new window.EMAS.APM({
+        appKey: 'appKey', // EMAS 控制台创建应用后分配
+        appSecret: 'appSecret', // EMAS 控制台创建应用后分配
+        appVersion: 'appVersion', // 应用版本号
+        channel: 'channel', // 应用渠道号
+        userNick: 'userNick', // 用户昵称
+        userId: 'userId', // 用户id
+        });
+
+        /**
+        *  SDK 功能配置和启动
+        *  各功能插件配置请查阅SDK API文档
+        */
+        var plugins = apm.start()
         function copyToClipboard(elementId) {
             const copyText = document.getElementById(elementId);
             copyText.select();
