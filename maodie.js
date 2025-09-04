@@ -31,7 +31,7 @@
   'use strict';
 
   // 资源（已提供的 GIF 动图）
-  const GIF_URL = 'maodie.gif';
+  const GIF_URL = 'https://cdn.jsdelivr.net/gh/appmycn/maodie@main/maodie.gif';
   const NATURAL_W = 282;
   const NATURAL_H = 97;
 
