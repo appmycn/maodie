@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>星野慎小站</title>
+    <!-- Windows 98 CSS 库 -->
+    <link rel="stylesheet" href="win98.css">
+    <!-- 字体图标 -->
+    <link rel="stylesheet" href="font-awesome.css">
+    <style>
+        @font-face {  
+            font-family: 'XiangSu';
+            src: url('ark-pixel-10px-monospaced-zh_cn.ttf') format('truetype');
+        }
+
+        a,p {
+            font-size: 13px;
+            text-decoration: none;
+        }
+
+        body {
+            background-color: #008080;
+            color: #000;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-family: 'XiangSu', sans-serif !important;
+        }
+        
+        .window {
+            width: 600px;
+            max-width: 100%;
+        }
+        
+        .title-bar {
+            background: linear-gradient(90deg, #000080, #1084d0);
+            color: white;
+            padding: 3px 5px;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .title-bar-text {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .window-body {
+            padding: 20px;
+            background: #c0c0c0;
+        }
+        
+        .step-content {
+            margin-bottom: 20px;
+            padding: 10px;
+            background: #e0e0e0;
+            border: 2px solid;
+            border-color: #808080 #ffffff #ffffff #808080;
+            position: relative;
+        }
+        
+        .step-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 24px;
+            height: 24px;
+            background: #000080;
+            color: white;
+            text-align: center;
+            margin-right: 10px;
+            font-weight: bold;
+        }
+        
+        .copy-field {
+            position: relative;
+            margin: 5px 0;
+        }
+        
+        .copy-input {
+            width: 95%;
+            padding: 8px;
+            background: white;
+            border: 2px solid;
+            border-color: #808080 #ffffff #ffffff #808080;
+            font-family: "Courier New", monospace;
+            font-size: 14px;
+        }
+        
+        .logo {
+            text-align: center;
+            margin-bottom: 15px;
+            font-size: 42px;
+            color: #000080;
+        }
+        
+        h1 {
+            text-align: center;
+            color: #000080;
+            margin-bottom: 10px;
+            font-size: 24px;
+        }
+        
+        .subtitle {
+            color: #000080;
+            text-align: center;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+        
+        .success-message {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #c0c0c0;
+            border: 2px solid;
+            border-color: #ffffff #808080 #808080 #ffffff;
+            padding: 15px;
+            display: none;
+            align-items: center;
+            gap: 10px;
+            z-index: 1000;
+            box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+            animation: fadeIn 0.3s ease;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .footer {
+            text-align: center;
+            color: white;
+            padding: 10px;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 10px;
+            flex-wrap: wrap;
+        }
+        
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+        
+        .note {
+            display: flex;
+            align-items: center;
+            font-size: 12px;
+            flex-wrap: wrap; 
+            gap: 5px;
+        }
+        
+        .button {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        h4 {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 主窗口 -->
+    <div class="window">
+        <div class="title-bar">
+            <div class="title-bar-text">
+                <i class="fas fa-window-maximize"></i>
+                <span>maodie.js</span>
+            </div>
+            <div class="title-bar-controls">
+                <button aria-label="Minimize"></button>
+                <button aria-label="Maximize"></button>
+                <button aria-label="Close"></button>
+            </div>
+        </div>
+        <div class="window-body">
+            <div class="logo">
+                <i class="fas fa-spider"></i>
+            </div>
+            <p class="subtitle">网上来点儿蜘蛛</p>
+            
+            <div class="step-content">
+                <h4><span class="step-number">1</span> 创建浏览器书签</h4>
+                <p>创建一个名为"蜘蛛书签"的新书签，并使用以下代码作为网址：</p>
+                <div class="copy-field">
+                    <input type="text" class="copy-input" value="javascript:void(document.body.appendChild(document.createElement('script')).src='http://127.0.0.1/maodie.js')" readonly id="bookmarkCode">
+                    <div style="display: flex;">
+                        <button class="button" onclick="copyToClipboard('bookmarkCode')">
+                            <i class="fas fa-copy"></i> 复制代码
+                        </button>
+                        <button class="button" onclick="copyToClipboard('bookmarkCode')">
+                            <i class="fas fa-link"></i>
+                            <a class="button" href="javascript:void(document.body.appendChild(document.createElement('script')).src='http://127.0.0.1/maodie.js')" style="color: #000;">蜘蛛书签</a>
+                        </button>
+                    </div>
+                    <div class="note">
+                        <p>电脑端长按 蜘蛛书签 移动到书签栏，可以快捷添加书签</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="step-content">
+                <h4><span class="step-number">2</span> 使用书签</h4>
+                <p>打开任意网站，然后点击书签栏中的"蜘蛛书签"</p>
+            </div>
+            
+            <div class="note">
+                <i class="fas fa-info-circle" style="color: #000080;"></i>
+                <p> 电脑、手机端推荐使用 Chrome 浏览器打开</p>
+            </div>
+
+            
+        </div>
+    </div>
+    
+    <!-- 页脚信息 -->
+    <div class="footer">
+        <div class="footer-links">
+            <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=41162402000181" target="_blank">豫公网安备 41162402000181号</a>
+            <a href="https://beian.miit.gov.cn/" target="_blank">豫ICP备20001793号-3</a>
+        </div>
+    </div>
+
+    <!-- 成功消息 -->
+    <div class="success-message" id="successMessage">
+        <i class="fas fa-check-circle" style="color: #008000;"></i>
+        <span>代码已复制！</span>
+    </div>
+
+    <script>
+        function copyToClipboard(elementId) {
+            const copyText = document.getElementById(elementId);
+            copyText.select();
+            copyText.setSelectionRange(0, 99999); // For mobile devices
+            
+            navigator.clipboard.writeText(copyText.value).then(() => {
+                // 显示成功消息
+                const successMessage = document.getElementById('successMessage');
+                successMessage.style.display = 'flex';
+                
+                // 3秒后自动隐藏
+                setTimeout(() => {
+                    successMessage.style.display = 'none';
+                }, 3000);
+            }).catch(err => {
+                console.error('复制失败: ', err);
+                alert('请手动选择复制文本');
+            });
+        }
+        
+        // 点击输入框也可以复制
+        document.querySelectorAll('.copy-input').forEach(input => {
+            input.addEventListener('click', function() {
+                this.select();
+                navigator.clipboard.writeText(this.value).then(() => {
+                    const successMessage = document.getElementById('successMessage');
+                    successMessage.style.display = 'flex';
+                    
+                    setTimeout(() => {
+                        successMessage.style.display = 'none';
+                    }, 3000);
+                });
+            });
+        });
+        
+        // 窗口拖动功能简化实现
+        const windows = document.querySelectorAll('.window');
+        windows.forEach(window => {
+            const titleBar = window.querySelector('.title-bar');
+            let isDragging = false;
+            let startX, startY, initialX, initialY;
+            
+            titleBar.addEventListener('mousedown', (e) => {
+                isDragging = true;
+                startX = e.clientX;
+                startY = e.clientY;
+                initialX = parseInt(window.style.left || 0);
+                initialY = parseInt(window.style.top || 0);
+                
+                // 确保窗口在最前面
+                windows.forEach(w => w.style.zIndex = '1');
+                window.style.zIndex = '10';
+                
+                e.preventDefault();
+            });
+            
+            document.addEventListener('mousemove', (e) => {
+                if (!isDragging) return;
+                
+                const dx = e.clientX - startX;
+                const dy = e.clientY - startY;
+                
+                window.style.position = 'absolute';
+                window.style.left = (initialX + dx) + 'px';
+                window.style.top = (initialY + dy) + 'px';
+            });
+            
+            document.addEventListener('mouseup', () => {
+                isDragging = false;
+            });
+        });
+    </script>
+</body>
+</html>
