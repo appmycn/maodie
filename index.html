@@ -6,8 +6,6 @@
     <title>星野慎小站</title>
     <!-- Windows 98 CSS 库 -->
     <link rel="stylesheet" href="win98.css">
-    <!-- 字体图标 -->
-    <link rel="stylesheet" href="font-awesome.css">
     <style>
         * {
             font-family: 'XiangSu', sans-serif !important;
@@ -32,7 +30,6 @@
         }
         
         .title-bar {
-            background: linear-gradient(90deg, #000080, #1084d0);
             color: white;
             padding: 3px 5px;
             font-weight: bold;
@@ -67,7 +64,7 @@
             justify-content: center;
             width: 24px;
             height: 24px;
-            background: #000080;
+            background: #00f;
             color: white;
             text-align: center;
             margin-right: 10px;
@@ -93,18 +90,18 @@
             text-align: center;
             margin-bottom: 15px;
             font-size: 42px;
-            color: #000080;
+            color: #00f;
         }
         
         h1 {
             text-align: center;
-            color: #000080;
+            color: #00f;
             margin-bottom: 10px;
             font-size: 24px;
         }
         
         .subtitle {
-            color: #000080;
+            color: #00f;
             text-align: center;
             margin-bottom: 20px;
             font-style: italic;
@@ -184,8 +181,7 @@
     <div class="window">
         <div class="title-bar">
             <div class="title-bar-text">
-                <i class="fas fa-window-maximize"></i>
-                <span>maodie.js</span>
+                <span>🕷︎ maodie.js</span>
             </div>
             <div class="title-bar-controls">
                 <button aria-label="Minimize"></button>
@@ -195,8 +191,8 @@
         </div>
         <div class="window-body">
             <div class="logo">
-                <i class="fas fa-spider"></i>
                 <a href="https://github.com/appmycn/maodie">
+                    <i style="font-size: 30px !important;">&lt;script&gt;🕷︎&lt;/script&gt;</i>
                     <img alt="欢迎stars!" src="https://img.shields.io/github/stars/appmycn/maodie" style="max-width: 100%;">
                 </a>
             </div>
@@ -209,11 +205,8 @@
                 <div class="copy-field">
                     <input type="text" class="copy-input" value="javascript:void(document.body.appendChild(document.createElement('script')).src='https://www.appmy.cn/maodie.js')" readonly id="bookmarkCode">
                     <div style="display: flex;">
-                        <button class="button" onclick="copyToClipboard('bookmarkCode')">
-                            <i class="fas fa-copy"></i> 复制代码
-                        </button>
-                        <button class="button" onclick="copyToClipboard('bookmarkCode')">
-                            <i class="fas fa-link"></i>
+                        <button class="button" onclick="copyToClipboard('bookmarkCode')">🖹 复制代码</button>
+                        <button class="button" onclick="copyToClipboard('bookmarkCode')">🔗 
                             <a class="button" href="javascript:void(document.body.appendChild(document.createElement('script')).src='https://www.appmy.cn/maodie.js')" style="color: #000;">蜘蛛书签</a>
                         </button>
                     </div>
@@ -227,7 +220,7 @@
             </div>
             
             <div class="note">
-                <i class="fas fa-info-circle" style="color: #000080;"></i>
+                <i class="fas fa-info-circle" style="color: #00f;"></i>
                 <p> 电脑、手机端推荐使用 Chrome 浏览器打开</p>
             </div>
 
@@ -245,7 +238,7 @@
 
     <!-- 成功消息 -->
     <div class="success-message" id="successMessage">
-        <i class="fas fa-check-circle" style="color: #008000;"></i>
+        <i>🚧</i>
         <span>代码已复制！</span>
     </div>
 
