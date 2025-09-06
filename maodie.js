@@ -1,37 +1,13 @@
-/*!
- * Maodie.js - Spider Screen Effect
- * Version: 1.1.0
- * GIF: https://uy.wzznft.com/i/2025/09/04/grxn35.gif
- *
- * Copyright (C) 2025 Maodie Contributors
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <https://www.gnu.org/licenses/>.
- */
-
 /* 
- * https://kickassapp.com/
  * javascript:var s=document.createElement('script');s.type='text/javascript';document.body.appendChild(s);s.src='http://127.0.0.1/maodie.js';void(0);
  * javascript:void(document.body.appendChild(document.createElement('script')).src='http://127.0.0.1/maodie.js')
- *
- *
 */
 
 (() => {
   'use strict';
 
   // 资源（已提供的 GIF 动图）
-  const GIF_URL = 'https://cdn.jsdelivr.net/gh/appmycn/maodie@main/maodie.gif';
+  const GIF_URL = 'https://www.appmy.cn/maodie.gif';
   const NATURAL_W = 282;
   const NATURAL_H = 97;
 
