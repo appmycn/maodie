@@ -4,8 +4,8 @@
             "source": "/assets/*",
             "headers": [
                 {
-                    "key": "Referrer-Policy",
-                    "value": "unsafe-url"
+                    "key": "Access-Control-Allow-Origin",
+                    "value": "*"
                 }
             ]
         }
