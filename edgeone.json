@@ -1,0 +1,12 @@
+{
+    "headers": [
+        {
+            "source": "/assets/*",
+            "headers": [
+                {
+                    "Referrer-Policy": "no-referrer"
+                }
+            ]
+        }
+    ]
+}
