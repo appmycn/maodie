@@ -4,7 +4,8 @@
             "source": "/assets/*",
             "headers": [
                 {
-                    "Referrer-Policy": "no-referrer"
+                    "key": "Referrer-Policy",
+                    "value": "no-referrer"
                 }
             ]
         }
